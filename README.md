@@ -1,5 +1,4 @@
 #lein-cljsnwk
-----
 
 ### Usage
 [Node-webkit](https://github.com/rogerwang/node-webkit), the [popular](https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit) app runtime based on Chromium and node.js, allows for native applications to be built using modern web technologies like HTML, CSS, and Javascript. This project aims to provide a turnkey template for developing node-webkit applications using Clojurescript.
