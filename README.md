@@ -138,9 +138,6 @@ will change to
     "show":   true,
     "toolbar": true,
     "resizable": true
-  },
-  "devDependencies": {
-    "connect" : "*"
   }
 }
 ```
