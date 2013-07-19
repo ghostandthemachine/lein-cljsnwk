@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# {{name}} run script
+# run application by calling
+# ./script/{{name}}
+
+###############################################################################
+
+##
+## Docs from node-webkit "How to run apps" page (https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps)
+##
+
+# Windows
+
+# On Windows, the easiest way to run the app is to drag the folder onto nw.exe, or a shortcut to nw.exe. Remember to drag the folder containing package.json, and not package.json itself.
+
+# You can also call it from the command line:
+
+# For instance:
+
+# nw C:\apps\myapp
+# nw C:\apps\packagedapp.nw
+# Linux
+
+# On Linux, you can use one of these command lines:
+
+# nw /home/path/to/appdir/
+# nw /home/path/to/packagedapp.nw
+# If you have installed the .deb, you can double click on .nw files in your file manager as well.
+
+# Mac OS X
+
+# On Mac OSX, a folder or .nw file can be dropped onto the nw.app application bundle. On the Mac OSX Terminal (commandline), you can use nw like this (assuming it's installed to the Applications directory):
+
+# open -n -a node-webkit "/home/path/to/app" 
+# In some cases it may be faster to invoke the nw binary inside the application bundle directly via the following:
+
+# /Applications/node-webkit.app/Contents/MacOS/node-webkit myapp 
+# You can setup an alias in your Terminal session to call the binary when you use nw by adding an alias to your ~/.bash_profile (open -a TextEdit ~/.bash_profile):
+
+# # alias to nw
+# alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
+# Now you can call nw from the commandline like Linux and Windows:
+
+# nw "/home/path/to/game" 
+
+###############################################################################
+
+
+# OSX path
+nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
+# TODO: Windows path
+# nw="C/..."
+# TODO: Linux path
+# nw="/.."
+
+# Serve html localy to support browser connected REPL
+
+if pgrep app.js
+then
+    donothing=0
+else
+    node app.js &
+fi
+
+${nw} $(pwd) $@
