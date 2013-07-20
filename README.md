@@ -78,7 +78,7 @@ This will create a new cljsnwk project with the following initial structure
 	+ package.json
 	+ project.clj
 	
-After the project is creating, cd into the root directory.
+After the project is created, cd into the root directory.
 
 `$ cd ../projects/my-project`
 
