@@ -1,5 +1,5 @@
 #lein-cljsnwk
-----
+
 
 ### Usage
 [Node-webkit](https://github.com/rogerwang/node-webkit), the [popular](https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit) app runtime based on Chromium and node.js, allows for native applications to be built using modern web technologies like HTML, CSS, and Javascript. This project aims to provide a turnkey template for developing node-webkit applications using Clojurescript.
@@ -33,7 +33,7 @@ This template is built on a few key components
 1. Download node-webkit binary
 	+ node-webkit [downloads](https://github.com/rogerwang/node-webkit#downloads)
 2. Create new project using lein new cljsnwk
-	+ `$ lein new cljsnwk my- project`
+	+ `$ lein new cljsnwk my-project`
 3. Open project directory
 	+ `$ cd ../my-project`
 4. Install node modules
@@ -78,7 +78,7 @@ This will create a new cljsnwk project with the following initial structure
 	+ package.json
 	+ project.clj
 	
-After to project is creating, cd into the root directory.
+After the project is creating, cd into the root directory.
 
 `$ cd ../projects/my-project`
 
