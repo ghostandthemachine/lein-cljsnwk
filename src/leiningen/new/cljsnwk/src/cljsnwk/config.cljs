@@ -15,7 +15,7 @@
 (defn load-js-file
 	[path]
 	(let [js-file (.createElement js/document "script")]
-		(aset js-file "path" path)
+		(aset js-file "src" path)
 		(aset js-file "type" "text/javascript")
 		(aset js-file "async" false)
 		(.appendChild (body) js-file)
@@ -39,7 +39,7 @@
 		(when before-init-fn
 			(before-init-fn))	
 		(doseq [js (:javascripts deps)]
-			(load-css-file js))
+			(load-js-file js))
 		(doseq [css (:css deps)]
 			(load-css-file css))
 		(when (:init-repl deps)
